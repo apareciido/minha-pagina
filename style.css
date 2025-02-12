@@ -104,7 +104,7 @@ header {
 }
 .container h3 {
     color: #5438DC;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-family: "Montserrat", sans-serif;
     padding: 10px 20px;
     animation: fadeIn 2s;
@@ -116,6 +116,47 @@ header {
     padding: 10px 20px;
     animation: fadeIn 2s;
 }
+#portfolio h3 {
+    font-family: "Ubuntu";
+    text-align: center;
+    font-size: 3rem;
+    color: #5438DC;
+    margin: 50px 0;
+}
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: auto;
+}
+.post-grid {
+    width: 350px;
+    height: 350px;
+    border: 1px solid #5338dc31;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.329);
+}
+.post-grid img {
+    width: 350px;
+}
+.site-grid {
+    width: 600px;
+    height: 300px;
+    border: 1px solid #1e1e1e;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 1px 3px 5px #1e1e1e42;
+}
+#servicos h3 {
+    font-family: "Ubuntu";
+    text-align: center;
+    font-size: 2rem;
+    color: #5438DC;
+    margin: 50px 0
+}
+
 @media (max-width: 768px){
     .menu-toggle {
         display: flex;
@@ -141,5 +182,56 @@ header {
         opacity: 1;
         transform: translateY(0);
         visibility: visible;
+    }
+    .post-grid {
+        width: 150px;
+        height: 150px;
+    }
+    .post-grid img {
+        width: 150px;
+    }
+    .grid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1px;
+        flex-wrap: wrap;
+        max-width: 1500px;
+        margin: auto;
+    }
+    .container h1 {
+        color: #5438DC;
+        font-size: 2rem;
+        font-family: "Montserrat", sans-serif;
+        padding: 20px 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px solid #1e1e1e;
+        width: 0;
+        animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
+    }
+    .container h3 {
+        color: #5438DC;
+        font-size: 1rem;
+        font-family: "Montserrat", sans-serif;
+        padding: 10px 20px;
+        animation: fadeIn 2s;
+    }
+    .container p {
+        color: white;
+        font-family: "Poppins", sans-serif;
+        font-size: 0.9rem;
+        max-width: 800px;
+        padding: 10px 20px;
+        animation: fadeIn 2s;
+    }
+    .sobre-mim img {
+        width: 280px;
+        height: 280px;
+        margin: 50px;
+        margin: auto;
+        border-radius: 50%;
+        box-shadow: 10px 5px #5438DC;
+        animation: fadeIn 2s;
     }
 }
