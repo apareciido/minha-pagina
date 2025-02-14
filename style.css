@@ -218,11 +218,11 @@ main h3 {
         visibility: visible;
     }
     .post-grid {
-        width: 200px;
-        height: 200px;
+        width: 100px;
+        height: 100px;
     }
     .post-grid img {
-        max-width: 200px;
+        max-width: 100px;
     }
     .grid {
         display: flex;
