@@ -222,7 +222,7 @@ main h3 {
         height: 200px;
     }
     .post-grid img {
-        width: 200px;
+        max-width: 200px;
     }
     .grid {
         display: flex;
@@ -263,8 +263,8 @@ main h3 {
         animation: fadeIn 2s;
     }
     .sobre-mim img {
-        width: 280px;
-        height: 280px;
+        max-width: 280px;
+        max-height: 280px;
         margin: 50px;
         margin: auto;
         border-radius: 50%;
