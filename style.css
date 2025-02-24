@@ -53,7 +53,6 @@ header {
 }
 .sobre-mim {
     display: flex;
-    flex-wrap: wrap;
     height: 100vh;
     background-color: #1e1e1e;
 }
@@ -95,12 +94,8 @@ header {
     color: #5438DC;
     font-size: 3rem;
     font-family: "Montserrat", sans-serif;
-    padding: 10px;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid #1e1e1e;
-    width: 0;
-    animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
+    padding: 0px;
+    animation: fadeIn 2s;
 }
 .container > h3 {
     color: #5438DC;
@@ -132,7 +127,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1px;
+    gap: 8px;
     flex-wrap: wrap;
     margin: auto;
 }
@@ -141,6 +136,7 @@ header {
     height: 350px;
     border: 1px solid #5338dc31;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.329);
+    margin: 0;
 }
 .post-grid img {
     width: 350px;
@@ -164,36 +160,49 @@ main h3 {
     width: 250px;
 
 }
-#habilidades {
+.container {
+    max-width: 900px;
+    text-align: center;
+}
+h2 {
+    margin: 20px;
+    font-size: 28px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: #5438DC;
+
+}
+.services {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    background-color: #1e1e1e;
-    border-radius: 0 0 20px 20px;
-    margin: 0;
+    justify-content: center;
+    gap: 20px;
 }
-#habilidades .hab {
-    background-color: #ffffff;
-    width: 350px;
-    height: 500px;
-    margin: 30px;
-    border-radius: 30px;
+.service {
+    background: white;
     padding: 20px;
-    transition: ease-in-out 0.3s;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
-.hab:hover {
-    transform: scale(1.1);
+.service:hover {
+    transform: translateY(-5px);
 }
-#skills {
-    font-size: 2rem;
-    font-weight: bold;
-    background-color: #1e1e1e;
-    padding: 20px;
-    margin: 0;
-    border-radius: 20px 20px 0 0;
-    
+.service i {
+    font-size: 40px;
+    color: #ff9800;
+    margin-bottom: 10px;
 }
-
+.service h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.service p {
+    font-size: 14px;
+    color: #666;
+}
 @media (max-width: 768px){
     .menu-toggle {
         display: flex;
@@ -220,64 +229,71 @@ main h3 {
         transform: translateY(0);
         visibility: visible;
     }
-    .post-grid {
-        width: 100px;
-        height: 100px;
-    }
-    .post-grid img {
-        max-width: 100px;
-    }
-    .grid {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1px;
-        flex-wrap: wrap;
-        margin: auto;
-    }
-    .container h1 {
-        color: #5438DC;
-        text-align: center;
-        font-size: 2rem;
-        font-family: "Montserrat", sans-serif;
-        padding: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        border-right: 2px solid #1e1e1e;
-        width: 0;
-        animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
-    }
-    .container h3 {
-        color: #5438DC;
-        text-align: center;
-        font-size: 1rem;
-        font-family: "Montserrat", sans-serif;
-        padding: 0;
-        animation: fadeIn 2s;
-    }
-    .container p {
-        color: white;
-        text-align: center;
-        font-family: "Poppins", sans-serif;
-        font-size: 0.9rem;
-        max-width: 800px;
-        padding: 10px;
-        animation: fadeIn 2s;
-    }
     .sobre-mim img {
-        max-width: 250px;
-        max-height: 250px;
-        margin: 50px;
+        width: 250px;
+        height: 250px;
         margin: auto;
         border-radius: 50%;
         box-shadow: 10px 5px #5438DC;
         animation: fadeIn 2s;
     }
-    .empresa-grid img {
-        width: 150px;
-    
+    .container p {
+        color: white;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        font-size: 0.8rem;
+        max-width: 800px;
+        padding: 10px 20px;
+        animation: fadeIn 2s;
     }
-    #post-grid {
-        display: none;
+    .sobre-mim {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100vh;
+        background-color: #1e1e1e;
+    }
+    .container h1 {
+        color: #5438DC;
+        font-size: 2rem;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        padding: 0px;
+    }
+    .container > h3 {
+        color: #5438DC;
+        text-align: center;
+        font-size: 1.2rem;
+        font-family: "Montserrat", sans-serif;
+        padding: 0px;
+        animation: fadeIn 2s;
+    }
+    #portfolio h3 {
+        font-family: "Ubuntu";
+        text-align: center;
+        font-size: 2rem;
+        color: #5438DC;
+        margin: 50px 0;
+    }
+    .post-grid {
+        width: 150px;
+        height: 150px;
+        border: 1px solid #5338dc31;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.329);
+        margin: 0;
+    }
+    .post-grid img {
+        width: 150px;
+    }
+    .empresas {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        gap: 10px;
+    }
+    .empresa-grid img {
+        width: 200px;
     }
 }
+
